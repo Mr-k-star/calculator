@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <style>
+            #calc-contain{
+            position: fixed;
+            height: 280px;
+            top: 50%;
+            left: 50%;
+            margin-top: -140px;
+            margin-left: -170px;
+  width: 300px;
+  border: 10px solid rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 20px 10px 50px 10px;
+  background-color: orangered;
+}
+input[type=button] {
+  background: rgb(255, 255, 255);
+  width: 20%;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 13px;
+}
+input[type=button]:active {
+  box-shadow: 0 5px blue;
+  transform: translateY(6px);
+  border-color: white 5px;
+}
+input[type=button]:hover {
+  background-color:blue;
+  color: white;
+}
+
+input[type = text] {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 4px 0px 12px black inset;
+}
+p{ 
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  text-align: justify;  
+}
+
+        </style>
+    </head>
+    <body style="background-color: orange; max-width: 300;">
+        <div>
+          <h1 style=" text-align: center; background-color: blanchedalmond; color: orangered;">Calculator</h1>
+          <p> A calculator is a device that performs arithmetic operations on numbers. The simplest calculators can do only addition, subtraction, multiplication, and division.</p>
+        </div>
+        <div id='calc-contain'>
+  
+          <form name="calculator">
+            
+            <input type="text" name="user_input" />
+            <br>
+            
+            <input type="button" value=" 1 " onclick="calculator.user_input.value += '1'" />
+            <input type="button" value=" 2 " onclick="calculator.user_input.value += '2'" />
+            <input type="button" value=" 3 " onclick="calculator.user_input.value += '3'" />
+            <input type="button" value=" + " onclick="calculator.user_input.value += '+'" />
+            <br/>
+            
+            <input type="button" value=" 4 " onclick="calculator.user_input.value += '4'" />
+            <input type="button" value=" 5 " onclick="calculator.user_input.value += '5'" />
+            <input type="button" value=" 6 " onclick="calculator.user_input.value += '6'" />
+            <input type="button" value=" - " onclick="calculator.user_input.value += '-'" />
+            </br>
+          
+            <input type="button" value=" 7 " onclick="calculator.user_input.value += '7'" />
+            <input type="button" value=" 8 " onclick="calculator.user_input.value += '8'" />
+            <input type="button" value=" 9 " onclick="calculator.user_input.value += '9'" />
+            <input type="button" value=" x " onclick="calculator.user_input.value += '*'" />
+            </br>
+        
+            <input type="button" value=" c " onclick="calculator.user_input.value = ''" />
+            <input type="button" value=" 0 " onclick="calculator.user_input.value += '0'" />
+            <input type="button" value=" = " onclick="calculator.user_input.value = eval(calculator.user_input.value)" />
+            <input type="button" value=" / " onclick="calculator.user_input += '/'" />
+            </br>
+  
+    
+          </form>
+        </div>
+    </body>
+</html>
